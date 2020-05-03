@@ -6,25 +6,26 @@ RUN apt-get update && \
     yes | unminimize && \
     apt-get -y install --no-install-recommends apt-utils dialog 2>&1 && \
     apt-get -y install \
-        apt-transport-https \
-        bash-completion \
-        ca-certificates \
-        curl \
-        git \
-        git-man \
-        inetutils-ping \
-        inotify-tools \
-        ipython3 \
-        lsb-release \
-        man \
-        netcat \
-        openssl \
-        procps \
-        python3 \
-        python3-pip \
-        software-properties-common \
-        sudo \
-        tzdata
+    apt-transport-https \
+    bash-completion \
+    ca-certificates \
+    curl \
+    figlet \
+    git \
+    git-man \
+    inetutils-ping \
+    inotify-tools \
+    ipython3 \
+    lsb-release \
+    man \
+    netcat \
+    openssl \
+    procps \
+    python3 \
+    python3-pip \
+    software-properties-common \
+    sudo \
+    tzdata
 
 COPY docker-apt-key.gpg /tmp/
 RUN apt-key add /tmp/docker-apt-key.gpg && \
